@@ -23,9 +23,15 @@ I had two tasks:
 Users need to know the positions or relative locations of the particles, 3D distance between any two points, 3D coordinates of any point, dimensions of any subdetector, etc. For this, I did the following tasks:
 1. Cartesian Grid: I introduced a 3D cartesian grid, that has various features. It has planes in XY, YZ and ZX directions, the number of planes in each direction can be changed, user can toggle the visibility of the planes of any direction, the sparsity of the gridlines can be changed, the grid can be translated - either by manually entering the value of the 3D coordinates of the new origin, or by clicking at any point to make it the new origin.
 
+<img style="padding: 20px;" alt="grid" src="./assets/grid.png" height="500"> 
+
 2. 3D Points: User can click at any point in the scene, and if there are visible meshes directly under the pointer, the 3D coordinates of the closest intersect will be displayed. A ray emits from the pointer towards the screen, and intersects with any mesh that falls under it. The coordinates of the closest intersect are extracted. Here is a catch, that, when the clipping is enabled, the ray cannot detect it, and intersect with the clipped region as well. So, the intersects that lie under the clipped region need to be manually discarded.
 
+<img style="padding: 20px;" alt="3D Points" src="./assets/3dPoints.png" height="500"> 
+
 3. 3D Distance: Using this "3D Points" feature, user can find out the distance between any two points in three dimension.
+
+<img style="padding: 20px;" alt="distance" src="./assets/distance.png" height="500"> 
 
 Here are the PRs:
 1. https://github.com/HSF/phoenix/pull/587
@@ -36,6 +42,8 @@ Here are the PRs:
 Users need a feature in which he can navigate easily to any part of the detector, thereby reaching its subparts. For this, I added a menu, in which user can select the category of the subparts first. Now, in this category, all of the subparts will be listed. In front of each subpart, there are two buttons:
 1. Move camera to object: This button will zoom the camera into the subpart's location, as well has highlight it.
 2. Highlight object: This button will highlight or draw an outline around the subpart.
+
+<img style="padding: 20px;" alt="navigate" src="./assets/navigate.png" height="500"> 
 
 Here is the PR:
 https://github.com/HSF/phoenix/pull/617
