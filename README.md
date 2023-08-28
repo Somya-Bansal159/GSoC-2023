@@ -21,4 +21,7 @@ This time, I managed to run the CI/CD. Here is the PR:
 
 https://github.com/HSF/phoenix/pull/616
 
-Next, I have added the functionality to list all the geometries, and there is a button in front of each of them to highlight it. Some features are left to be added in it, after which I will create a PR for the same.
+Next, I have added the functionality to list all the geometries, and there is a button in front of each of them to highlight it.
+
+Here is the PR:
+https://github.com/HSF/phoenix/pull/617
